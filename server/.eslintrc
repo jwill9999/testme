@@ -1,0 +1,48 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "extends": ["eslint:recommended", "plugin:node/recommended", "prettier"],
+  "env": {
+    "es6": true,
+    "node": true,
+    "mocha": true
+  },
+
+  "plugins": [
+    "prettier"
+  ],
+
+  "globals": {
+    "document": false,
+    "navigator": false,
+    "window": false
+  },
+
+  "rules": {
+    "prettier/prettier": "error",
+    "linebreak-style": ["error", "unix"],
+    "no-console": 0,
+    "no-undef": 0,
+    "radix": 0,
+    "no-param-reassign": 0,
+    "node/exports-style": ["error", "module.exports"],
+    "node/prefer-global/buffer": ["error", "always"],
+    "node/prefer-global/console": ["error", "always"],
+    "node/prefer-global/process": ["error", "always"],
+    "node/prefer-global/url-search-params": ["error", "always"],
+    "node/prefer-global/url": ["error", "always"]
+  },
+  "overrides": [{
+    "files": ["*.spec.js", "*.test.js"],
+
+    "rules": {
+      "no-unused-expressions": 0
+    }
+
+  }]
+}
