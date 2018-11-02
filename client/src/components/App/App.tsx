@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Header from '../Header/Header'
+import Navbar from '../Navbar/Navbar';
 import './App.css';
 
 export interface Props {
@@ -10,7 +10,7 @@ class App extends React.Component<Props> {
   public render() {
     return (
       <div id="wrapper" className="container-fluid" >
-        <Header name="TestMe" />
+        <Navbar />
         {this.props.children}
       </div >
     );
