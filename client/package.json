@@ -7,7 +7,10 @@
     "global": "^4.3.2",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
-    "react-scripts": "2.1.1"
+    "react-redux": "^5.1.0",
+    "react-scripts": "2.1.1",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -25,6 +28,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "@types/react-dom": "^16.0.9",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^3.1.0",
     "eslint-plugin-flowtype": "^3.2.0",
