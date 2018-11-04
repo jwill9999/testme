@@ -1,30 +1,60 @@
 // @flow
 
 import React from "react";
-import logo from "./logo.svg";
+import { createStore, applyMiddleware, compose } from "redux";
+import thunk from "redux-thunk";
+import { Route, Switch } from "react-router";
+import { BrowserRouter as Router } from "react-router-dom";
+import { Provider } from "react-redux";
+
 import "./App.css";
 
-type Props = {};
+/*  ============================
+         Redux Reducers
+    ============================
+*/
 
-export default class App extends React.Component<Props> {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+import reducers from "./reducers";
+
+/*  ============================
+        Component Imports
+    ============================
+*/
+
+import Navbar from "./components/Header";
+import Home from "./components/Home";
+import Page from "./components/Page";
+import ErrorPage from "./components/ErrorPage";
+
+/*  ============================
+       Redux Dev Tools Setup
+    ============================
+*/
+const enhancers = compose(
+  window.devToolsExtension ? window.devToolsExtension() : f => f
+);
+
+/*  ============================
+        Create Redux store
+    ============================
+*/
+
+const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
+const store = createStoreWithMiddleware(reducers, enhancers);
+
+export default function App() {
+  return (
+    <Provider store={store}>
+      <Router>
+        <>
+          <Navbar />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/page" component={Page} />
+            <Route component={ErrorPage} />
+          </Switch>
+        </>
+      </Router>
+    </Provider>
+  );
 }

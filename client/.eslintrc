@@ -28,12 +28,16 @@
         ]
       }
     ],
+    "react/destructuring-assignment": 0,
+    "react/require-default-props": 0,
     "linebreak-style": 0,
     "prettier/prettier": "error",
     "no-dupe-keys": 0,
     "no-console": 0,
     "react/prefer-stateless-function": 0,
-    "node/no-unsupported-features/es-syntax": 0
+    "node/no-unsupported-features/es-syntax": 0,
+    "prefer-destructuring": 0
+
 
   }
 }
