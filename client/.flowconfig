@@ -1,15 +1,18 @@
 [ignore]
-.*/node_modules/.*
-.*/build/.*
-.*/serviceWorker/.*
+
+
+
 
 [include]
 
 [libs]
-
+flow-typed
 [lints]
 
 [options]
+
+
+
 
 
 [strict]

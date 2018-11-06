@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "dotenv": "^6.1.0",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
     "global": "^4.3.2",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
@@ -18,7 +20,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "flow": "flow status"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -31,6 +34,7 @@
   ],
   "devDependencies": {
     "@types/react-dom": "^16.0.9",
+    "@types/redux": "^3.6.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^3.1.0",
     "eslint-plugin-flowtype": "^3.2.0",
@@ -40,8 +44,10 @@
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-react": "^7.11.1",
     "flow-bin": "^0.85.0",
+    "flow-typed": "^2.5.1",
     "prettier": "^1.14.3",
     "prettier-eslint": "^8.8.2",
-    "prettier-eslint-cli": "^4.7.1"
+    "prettier-eslint-cli": "^4.7.1",
+    "react-test-renderer": "^16.6.0"
   }
 }
