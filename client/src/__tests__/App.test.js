@@ -1,16 +1,17 @@
 import * as React from "react";
 import { mount } from "enzyme";
-import { Provider } from "react-redux";
+
+import Root from "../RootProvider";
 import App from "../App/App";
 
 const wrapper = mount(
-  <Provider>
+  <Root>
     <App />
-  </Provider>
+  </Root>
 );
 
 describe("App component", () => {
   it("renders without crashing", () => {
-    expect(wrapper).toEqual("Page component");
+    expect(wrapper.find(App).length).toEqual(1);
   });
 });
