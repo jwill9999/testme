@@ -13,10 +13,16 @@ import "./App.css";
     ============================
 */
 
-import Navbar from "../components/Header";
-import Home from "../components/Home";
-import Page from "../components/Page";
-import ErrorPage from "../components/ErrorPage";
+import Navbar from "../components/NavBar/NavBar";
+import Home from "../components/Home/Home";
+
+/*  ============================
+Container Imports
+============================
+*/
+
+import ErrorPage from "../containers/ErrorPage/ErrorPage";
+import Question from "../containers/Question/Question";
 
 export default function App() {
   return (
@@ -26,7 +32,7 @@ export default function App() {
           <Navbar />
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/page" component={Page} />
+            <Route path="/questions" component={Question} />
             <Route component={ErrorPage} />
           </Switch>
         </React.Fragment>
