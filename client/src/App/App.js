@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 // @flow
 
 import * as React from "react";

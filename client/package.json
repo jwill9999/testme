@@ -2,6 +2,11 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Jason Williams",
+    "email": "jasonwilliams@letuscode.co.uk",
+    "url": "http://www.letuscode.co.uk"
+  },
   "dependencies": {
     "dotenv": "^6.1.0",
     "enzyme": "^3.7.0",
@@ -45,9 +50,19 @@
     "eslint-plugin-react": "^7.11.1",
     "flow-bin": "^0.85.0",
     "flow-typed": "^2.5.1",
+    "jsdom-quokka-plugin": "^1.0.13",
     "prettier": "^1.14.3",
     "prettier-eslint": "^8.8.2",
     "prettier-eslint-cli": "^4.7.1",
     "react-test-renderer": "^16.6.0"
+  },
+  "quokka": {
+    "babel": {
+      "polyfill": true,
+      "presets": ["react-app"]
+    },
+    "plugins": [
+      "jsdom-quokka-plugin"
+    ]
   }
 }
